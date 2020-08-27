@@ -20,6 +20,7 @@ f = a/b;
 fprintf("Printing results \n");
 fprintf("a = %f; b = %f \n a+b = %f \n a-b = %f \n a*b = %f \n a/b = %f\n",a,b,c,d,e,f);
 
+% testing github
 
 
 

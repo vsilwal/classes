@@ -22,12 +22,14 @@ for j=1:n
 end
 
 m = length(x);
-val = zeros(m,1);
+val = zeros(m,1); % y at interpolating points x
 %
 %  evaluate the interpolation polynomial at y
 %
 for i = 1: m
     for j=1:n
+        % Calculate Vi(x)
+        % Sum of yj*Vi(x)
         XXX
     end
 end

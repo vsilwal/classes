@@ -28,8 +28,8 @@ val = zeros(m,1);
 %
 for i = 1: m
     for j=1:n
-        lj = x(i) - [xi(1:j-1);xi(j+1:n)];
-        val(i) = val(i) + yi(j)*prod(lj)*w(j);
+        XXX
+        XXX
     end
 end
 

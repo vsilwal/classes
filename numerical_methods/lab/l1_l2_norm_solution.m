@@ -22,6 +22,8 @@ N = 100;
 % crange = -10:15;
 mrange = -5 + 15*rand(N,1);
 crange = -10 + 25*rand(N,1);
+mrange = sort(mrange);
+crange = sort(crange);
 
 % grid search
 for ii = 1:length(mrange)

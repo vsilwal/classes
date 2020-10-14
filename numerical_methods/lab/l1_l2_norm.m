@@ -15,8 +15,15 @@ title('Points distribution')
 y = @(m,c,x) m*x + c;
 
 % approximate range
-mrange = -5:10;
-%crange = Range of intercept;
+N = 100;
+mmin = -5; mmax = 15;
+cmin = -10; cmax = 25;
+%mrange = linspace(mmin,mmax,N)';
+%crange = linspace(mmin,mmax,N)';
+mrange = mmin + mmax*rand(N,1);
+crange = cmin + cmax*rand(N,1);
+mrange = sort(mrange);
+crange = sort(crange);
 
 err = zeros(length(mrange),length(crange));
 
@@ -34,6 +41,7 @@ surf(err_l2)
 title('L2 norm')
 
 % find minimum
+% l1
 % XXX Find minimum of error
 m1 = mrange(row);
 c1 = crange(col);
@@ -41,3 +49,9 @@ x = linspace(1,10);
 figure(1); hold on
 plot(x,y(m1,c1,x),'r')
 % l2
+% XXX Find minimum of error
+m1 = mrange(row);
+c1 = crange(col);
+x = linspace(1,10);
+figure(1); hold on
+plot(x,y(m1,c1,x),'k')

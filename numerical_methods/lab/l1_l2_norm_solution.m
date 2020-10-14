@@ -1,10 +1,10 @@
 close all
 clear all
 clc
-X = [1:10];
-Y = [2 4 5 8 7 8 5 9 12 30];
+X = linspace(1,10,10);
+Y = [2 4 5 8 7 8 5 9 12 16];
 
-plot(X, Y,'o');
+plot(X, Y,'o','MarkerFaceColor','r','MarkerEdgeColor','k');
 xlabel('X')
 ylabel('Y')
 title('Points distribution')
@@ -18,10 +18,12 @@ y = @(m,c,x) m*x + c;
 
 % approximate range
 N = 100;
-% mrange = -5:10;
-% crange = -10:15;
-mrange = -5 + 15*rand(N,1);
-crange = -10 + 25*rand(N,1);
+mmin = -5; mmax = 15;
+cmin = -10; cmax = 25;
+%mrange = linspace(mmin,mmax,N)';
+%crange = linspace(mmin,mmax,N)';
+mrange = mmin + mmax*rand(N,1);
+crange = cmin + cmax*rand(N,1);
 mrange = sort(mrange);
 crange = sort(crange);
 
@@ -37,28 +39,29 @@ M = repmat(mrange,1,N);
 C = repmat(crange',N,1);
 
 figure
-surf(C',M',err_l1)
+surf(C',M',err_l1, 'EdgeColor','None')
 title('L1 norm')
 figure
-surf(err_l2)
+surf(err_l2,'EdgeColor','None')
 title('L2 norm')
 
+%============================================
 % find probability
 P = exp(-err_l1/1000);
 k = sum(P);
 p_L1 = P./k;
 figure
-surf(p_L1);
+surf(p_L1,'EdgeColor','None');
 P = exp(-err_l2/1000);
 k = sum(P);
 p_L2 = P./k;
 figure
-surf(p_L2);
+surf(p_L2,'EdgeColor','None');
 
 % Rejection Method
 chance = rand(N*N,1);
 ind = find(p_L1(:) > chance);
-
+%=============================================
 
 % find minimum
 min_l1 = min(err_l1(:));

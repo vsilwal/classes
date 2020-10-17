@@ -48,7 +48,7 @@ if 0
             yi(j) = 1; % L3
             
             % lagrange
-            y =lagrange_sol(xi,yi,x);
+            y =lagrange(xi,yi,x);
             plot(x,y,'Linewidth',2,'Displayname','lagrange');
         end
     end

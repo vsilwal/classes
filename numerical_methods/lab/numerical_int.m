@@ -33,8 +33,7 @@ if iex ==1
     y_sum = f(a,b,c,x_sum);
     
     % Area using TRAPEZOIDAL RULE
-    %area1 = 1/2 * h * (y1 + 2*y2 + y3); % KEY
-    area1 = 1/2 * h * (y(1) + sum(2*y_sum(2:end-1)) + y(end)); % KEY
+    area1 = XXX; % KEY
     
     % plot
     figure
@@ -85,7 +84,7 @@ if iex ==2
     y_mid = f(a,b,c,x_mid);
     
     % Area using MID-POINT RULE
-    area1 = h * sum(y_mid); % KEY
+    area1 = XXX; % KEY
     
     % plot
     figure
@@ -135,7 +134,7 @@ if iex == 3
     y_sum = f(a,b,c,x_sum);
     
     % Call simpson function for integration
-    area1 = simpson(x_sum,y_sum);
+    area1 = XXX;
     
     % plot
     figure
@@ -166,7 +165,7 @@ N = length(x);
 if mod(N,2)==1 
     % odd number of points (even number of intervals)
     % See class notes for derivation
-    area1 = (h/3)*(y(1) + sum(4*y(2:2:end-1)) + sum(2*y(3:2:end-2)) + y(end));
+    area1 = XXX;
 else
     % even number of points
     % odd number of intervals (mod(N,2) == 0); % 3/8 rule

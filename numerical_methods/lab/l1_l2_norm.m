@@ -1,6 +1,10 @@
 close all
-X = [1:10];
-Y = [2 4 5 8 7 8 5 9 12 16];
+Nsamples=1000;
+X = linspace(1,10,Nsamples);
+
+% line
+y = @(m,c,x) m*x + c;
+Y = y(1,3,X) + 2*rand(1,Nsamples);
 
 plot(X, Y,'o');
 xlabel('X')
@@ -11,8 +15,6 @@ title('Points distribution')
 %err1 = @(y1,y2) XXX;
 %err2 = @(y1,y2) XXX;
 
-% line
-y = @(m,c,x) m*x + c;
 
 % approximate range
 N = 100;
@@ -30,7 +32,7 @@ err = zeros(length(mrange),length(crange));
 % grid search
 for ii = 1:length(mrange)
     for jj = 1:length(crange)
-% XXX Write something here
+        % XXX Write something here
     end
 end
 figure

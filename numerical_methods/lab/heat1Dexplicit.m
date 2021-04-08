@@ -13,7 +13,7 @@ Trock = 300; % Temperature of country rock [C]
 kappa = 1e-6; % Thermal diffusivity of rock [m2/s]
 W = 5; % Width of dike [m]
 day = 3600*24; % # seconds per day
-dt = 1*day; % Timestep [s]
+dt = 10*day; % Timestep [s]
 
 % Numerical parameters
 nx = 201; % Number of gridpoints in x-direction

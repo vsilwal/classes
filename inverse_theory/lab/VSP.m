@@ -79,7 +79,7 @@ grid on;
 
 %======================Inversion=====================
 % solving for m
-m_exact = G\d_exact;
+m_exact = XXX;
 
 % TASKS: 
 % 1. Check the difference between m_true and m_exact
@@ -99,7 +99,7 @@ grid on;
 std = .000005; % in seconds
 error = (std)*randn(N,1);
 d_obs = d_exact + error;
-m_inv = G\d_obs;
+m_inv = XXX;
 figure
 
 % TASKS: 

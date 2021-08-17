@@ -2,7 +2,7 @@ clc
 clear all
 close all
 
-iex = 3; % Select example
+iex = 1; % Select example
 %% EXAMPLE 1: Projectile
 if 0
     t = linspace(0,100,5);   % in seconds
@@ -55,5 +55,3 @@ if iex > 2 || 2~=1
     % LAB ASSIGNMENT 2
     % Find x where y is minimum and maximum
 end
-
-%% EXAMPLE 3: 

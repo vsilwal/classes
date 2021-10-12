@@ -1,9 +1,11 @@
 clc, clear all, %close all
 
-iex = 5;
+% Select example
+iex = 5; 
+
 %% Example 1: dy = cos(x)
 if iex == 1
-    c = [-15:0.5:50]; % a subsetted range of C (in Reality this could be any real value)
+    c = [-15:0.5:50]; % a subsetted range of C (in Reality this could be any real value) - constant of integral
     x = [-5:0.1:5]; % pick x range (function actually extends from -inf to + inf)
     
     dy = @(x) cos(x);
@@ -83,6 +85,7 @@ if iex == 4
 end
 
 %% Example 5: Euler's method [ dy/dx = 2x ]
+%% Go through the class notes for modified Euler method
 if iex == 5
     % initial condition
     x0 = 0;
@@ -134,7 +137,7 @@ if iex == 5
     end
     
     %--------------------
-    % RK 4
+    % Runge Kutte 4 (RK4)
     
     % Initailize x
     deltax = 0.2; % smaller discretization (more accurate results)

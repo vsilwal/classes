@@ -95,10 +95,10 @@ quiver(X,Y,px,py)
 % Newtons method
 
 % Hessian 
-d2fdx2 = @(X,Y) -(4*cosd(2*X).*(cosd(X).^2 + cosd(Y).^2) - 2*(sind(2*X)).^2);
-d2fdy2 = @(X,Y) -(4*cosd(2*Y).*(cosd(X).^2 + cosd(Y).^2) - 2*(sind(2*Y)).^2);
-d2fdxdy = @(X,Y) -2*sind(2*X).*cosd(2*Y);
-d2fdydx = @(X,Y) -2*sind(2*X).*cosd(2*Y);
+d2fdx2 = XXX;
+d2fdy2 = XXX;
+d2fdxdy = XXX
+d2fdydx = XXX
 
 % Initial guess
 x = 100;

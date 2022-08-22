@@ -4,7 +4,7 @@ close all
 
 iex = 1; % Select example
 %% EXAMPLE 1: Projectile
-if 0
+if iex==1
     t = linspace(0,100,5);   % in seconds
     v0 = 500;                   % in m/s
     theta = 30;                 % in degrees
@@ -30,7 +30,7 @@ if 0
 end
 
 %% EXAMPLE 2: Read 1D waveform data
-if iex > 2 || 2~=1
+if iex == 2
     %ddir = '~/REPOSITORIES/IITR_seismo/classes/ES510/lab/data/';
     ddir = '/Users/vipul/Desktop/classes/numerical_methods/lab/data/';
     fname = 'XZ_GOAT_BHZ.dat';

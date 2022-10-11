@@ -170,6 +170,6 @@ else
     % even number of points
     % odd number of intervals (mod(N,2) == 0); % 3/8 rule
     % https://en.wikipedia.org/wiki/Simpson's_rule#Simpson.27s_3.2F8_rule
-    area1 = (3*h/8)*(y(1) + sum(3*y(2:3:end-2)) + sum(3*y(3:3:end-1)) + sum(2*y(3:3:end-4)) + y(end));
+    area1 = (3*h/8)*(y(1) + sum(3*y(2:3:end-2)) + sum(3*y(3:3:end-1)) + sum(2*y(4:3:end-4)) + y(end));
 end
 end

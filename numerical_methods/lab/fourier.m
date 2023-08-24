@@ -54,7 +54,7 @@ if iex == 2
     x_ii = -0.16;
     for ii = 1:N
         x_next = x_ii - fx(x_ii)/dfx(x_ii);
-        y = fx(x_ii) + dfx(x_ii)*(x - x_ii); %(y - y0) = m(x - x0)
+        y = XXX %(y - y0) = m(x - x0)
         % plot
         plot(x,y,'LineWidth',2,'DisplayName',['N = ',num2str(ii)])
         % Update x

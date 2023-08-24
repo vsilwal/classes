@@ -120,9 +120,7 @@ if iex == 5
     yvec(1) = y0;
     for ii=1:length(xvec)
         % Apply Euler's method
-        yvec(ii+1) = yvec(ii) + (dydx(xvec(ii),yvec(ii)))*deltax; % GENERAL
-        %yvec(ii+1) = yvec(ii) + (2*xvec(ii))*deltax; % KEY
-        %yvec(ii+1) = yvec(ii) + (-yvec(ii))*deltax; % KEY
+        XXX
         plot(xvec(ii),yvec(ii),'o','MarkerFaceColor','r','MarkerEdgeColor','k')
     end
     
@@ -130,9 +128,7 @@ if iex == 5
     xvec = [x0:deltax:x(end)];
     yvec(1) = y0;
     for ii=1:length(xvec)
-        yvec(ii+1) = yvec(ii) + (dydx(xvec(ii),yvec(ii)))*deltax; % GENERAL
-        %yvec(ii+1) = yvec(ii) + (2*xvec(ii))*deltax; % KEY
-        %yvec(ii+1) = yvec(ii) + (-yvec(ii))*deltax; % KEY
+        XXX
         plot(xvec(ii),yvec(ii),'o','MarkerFaceColor','b','MarkerEdgeColor','k')
     end
     
@@ -147,15 +143,14 @@ if iex == 5
     % Inline functions for k1,k2,k3,k4
     f = dydx;
     k1 = @(x,y) deltax * f(x, y);
-    k2 = @(x,y) deltax * f(x + deltax/2, y + k1(x,y)/2);
-    k3 = @(x,y) deltax * f(x + deltax/2, y + k2(x,y)/2);
-    k4 = @(x,y) deltax * f(x + deltax, y + k3(x,y));
+    k2 = XXX;
+    k3 = XXX;
+    k4 = XXX;
     
     % loop over x
     % compute y(ii+1)
     for ii=1:length(xvec)
-        yvec(ii+1) = yvec(ii) + (1/6*(k1(xvec(ii),yvec(ii))...
-            + 2*k2(xvec(ii),yvec(ii)) + 2*k3(xvec(ii),yvec(ii)) + k4(xvec(ii),yvec(ii))));
+        XXX
         plot(xvec(ii),yvec(ii),'o','MarkerFaceColor','c','MarkerEdgeColor','k')
     end
     %--------------------

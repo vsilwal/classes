@@ -86,3 +86,4 @@ function [d2fdx2] = hessx(xm, x, y)
 % Numerical second derivative
 d2fdx2 = (y(idx+1) - 2*y(idx) + y(idx-1))/((x(idx+1)-x(idx))^2);
 end
+

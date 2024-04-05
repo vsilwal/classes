@@ -1,11 +1,11 @@
 clc, clear all, close all
 
-iex = 1; % Example number
+iex = 2; % Example number
 
 %% Fourier Example 1 (f(x) = x)
 if iex == 1
     x = [-pi:.01:pi]; % range of X
-    N = 10; % number of fourier coefficients
+    N = 3; % number of fourier coefficients
     
     % actual function
     fx = @(x) x;
@@ -55,6 +55,7 @@ if iex == 2
     for ii = 1:N
         x_next = x_ii - fx(x_ii)/dfx(x_ii);
         y = XXX %(y - y0) = m(x - x0)
+
         % plot
         plot(x,y,'LineWidth',2,'DisplayName',['N = ',num2str(ii)])
         % Update x

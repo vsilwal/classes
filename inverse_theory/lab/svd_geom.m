@@ -1,3 +1,4 @@
+
 %
 % lab_svdgeom.m
 % Carl Tape, GEOS 627, Inverse Problems and Parameter Estimation
@@ -144,7 +145,7 @@ if bdagger
     plot(Vx(1,:),Vx(2,:),'b--'); axis equal, axis(ax0);
 
     if bdaggersol
-        Gdagger = XXX;
+        Gdagger = pinv(G);
         inv(G)
 
         subplot(nr,nc,2);

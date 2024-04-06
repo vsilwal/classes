@@ -27,6 +27,6 @@ for ii=1:length(r)
     imagesc(Xapprox);
 end
 
-[U,S,V]=svd(X,'econ');
-Xecon=U*S*V';
+[Ue,Se,Ve]=svd(X,'econ');
+Xecon=Ue*Se*Ve';
 imagesc(Xecon)

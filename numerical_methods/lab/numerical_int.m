@@ -24,7 +24,7 @@ if iex ==1
     y = f(a,b,c,x);
     
     % Discretize X for summation
-    xmin = 0; xmax = 4;
+    xmin = -1; xmax = 5;
     Nsamples = 6; % Number of points for dividing x (N-1 trapezoids)
     x_sum = linspace(xmin,xmax,Nsamples);
     h = x_sum(2) - x_sum(1);
@@ -72,7 +72,7 @@ if iex ==2
     y = f(a,b,c,x);
     
     % Discretize X for summation
-    xmin = 0; xmax = 4;
+    xmin = -1; xmax = 5;
     Nsamples = 6; % Number of points for dividing x (N-1 rectangles)
     x_sum = linspace(xmin,xmax,Nsamples);
     h = x_sum(2) - x_sum(1);
@@ -120,7 +120,7 @@ if iex == 3
     y = f(a,b,c,x);
     
     % Discretize X for summation
-    xmin = 0; xmax = 4;
+    xmin = -1; xmax = 5;
     
     % Number of points for dividing x (N-1 rectangles)
     % even N means odd number of subintervals (simpsons 3/8 rule)
